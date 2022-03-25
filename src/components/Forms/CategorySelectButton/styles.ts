@@ -20,7 +20,7 @@ export const Category = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(14)}px;
 
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.text_dark};
 `;
 
 export const Icon = styled(Feather)`
