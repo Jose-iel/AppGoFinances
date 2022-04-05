@@ -151,7 +151,6 @@ export function Dashboard(){
 
     useFocusEffect(useCallback(() =>{
         loadTransactions();
-    
     },[]))
 
     return (
