@@ -103,3 +103,7 @@ export const LoadContainer = styled.View`
     justify-content: center;
     align-items: center;
 `;
+
+export const LogoutButton = styled.TouchableOpacity`
+
+`

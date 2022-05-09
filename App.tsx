@@ -14,9 +14,9 @@ import {
 } from '@expo-google-fonts/poppins';
 
 import theme from './src/global/styles/theme';
-import { NavigationContainer } from '@react-navigation/native'
+import { Routes } from './src/routes'
 
-import { AppRoutes } from './src/routes/app.routes';
+import { AuthProvider, useAuth } from './src/hooks/auth';
 
 export default function App() {
 
@@ -26,16 +26,18 @@ export default function App() {
     Poppins_700Bold
   });
 
-  if(!fontsLoaded){
+  const { userStorageLoading } = useAuth();
+
+  if(!fontsLoaded || userStorageLoading){
     return <AppLoading />
   }
 
   return (
     <ThemeProvider theme={theme}>
-      <NavigationContainer>
-        <StatusBar barStyle="light-content"/>
-        <AppRoutes />
-      </NavigationContainer>
+      <StatusBar barStyle="light-content"/>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </ThemeProvider>
   );
 }
