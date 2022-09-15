@@ -1,12 +1,18 @@
 {
   "expo": {
     "name": "gofinances",
+    "icon": "./assets/logoApp.png",
     "slug": "gofinances",
     "scheme": "gofinances",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.ieltech.gofinances",
+      "versionCode": 1
+    },
+    "description": ""
   },
   "name": "gofinances"
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
-import AppLoading from 'expo-app-loading';
+import { Splash } from './src/screens/Splash';
 import { ThemeProvider } from 'styled-components';
 
 import 'intl';
@@ -29,7 +29,7 @@ export default function App() {
   const { userStorageLoading } = useAuth();
 
   if(!fontsLoaded || userStorageLoading){
-    return <AppLoading />
+    return <Splash />
   }
 
   return (
